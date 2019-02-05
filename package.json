@@ -1,0 +1,27 @@
+{
+  "name": "Famazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "famazonCustomer.js",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0",
+    "node": "^11.9.0",
+    "sql": "^0.78.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmudy/famazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmudy/famazon/issues"
+  },
+  "homepage": "https://github.com/dmudy/famazon#readme"
+}

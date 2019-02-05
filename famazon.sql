@@ -1,7 +1,7 @@
-CREATE DATABASE bamazon;
+CREATE DATABASE famazon;
 --Create a MySQL Database called `bamazon`.
 
-USE bamazon;
+USE famazon;
 
 CREATE TABLE products --Then create a Table inside of that database called `products`.
 (
