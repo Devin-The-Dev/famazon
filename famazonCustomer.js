@@ -34,7 +34,7 @@ function runSearch() {
             ]
         })
         .then(function (answer) {
-            switch (answer.action) {
+            switch (answer.decide) {
                 case "Shoes":
                     apperalSearch();
                     break;
@@ -72,17 +72,19 @@ function runSearch() {
 function apperalSearch() {
     inquirer
         .prompt({//The second message should ask how many units of the product they would like to buy.
-            name: "artist",
+            name: "quantity",
             type: "input",
             message: "How many units would you like to buy?"
         })
         .then(function (answer) {
-            var query = "SELECT stock_quantity FROM products WHERE ?";
-            connection.query(query, { artist: answer.artist }, function (err, res) {
-                for (var i = 0; i < res.length; i++) {
-                    console.log("Position: " + res[i].position + " || Song: " + res[i].song + " || Year: " + res[i].year);
-                }
-                runSearch();
+            console.log(answer);
+            var query = "SELECT * FROM products WHERE stock_quantity > 10";
+            connection.query(query, function (err, res) {
+                console.log(res);
+                // for (var i = 0; i < res.length; i++) {
+                //     console.log("Position: " + res[i].position + " || Song: " + res[i].song + " || Year: " + res[i].year);
+                // }
+                // runSearch();
             });
         });
 }
